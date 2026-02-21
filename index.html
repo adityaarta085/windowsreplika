@@ -11,22 +11,13 @@
       <div class="wallpaper-overlay"></div>
 
       <aside class="desktop-icons">
-        <button class="icon" data-app="explorer">
-          <span>📁</span>
-          <small>File Explorer</small>
-        </button>
-        <button class="icon" data-app="edge">
-          <span>🌐</span>
-          <small>Microsoft Edge</small>
-        </button>
-        <button class="icon" data-app="store">
-          <span>🛍️</span>
-          <small>Microsoft Store</small>
-        </button>
-        <button class="icon" data-app="terminal">
-          <span>⌨️</span>
-          <small>Terminal</small>
-        </button>
+        <button class="icon" data-app="explorer"><span>📁</span><small>File Explorer</small></button>
+        <button class="icon" data-app="edge"><span>🌐</span><small>Microsoft Edge</small></button>
+        <button class="icon" data-app="store"><span>🛍️</span><small>Microsoft Store</small></button>
+        <button class="icon" data-app="terminal"><span>⌨️</span><small>Terminal</small></button>
+        <button class="icon" data-app="notepad"><span>📝</span><small>Notepad</small></button>
+        <button class="icon" data-app="calculator"><span>🧮</span><small>Calculator</small></button>
+        <button class="icon" data-app="calendar"><span>📅</span><small>Calendar</small></button>
       </aside>
 
       <section class="window" id="window" aria-live="polite">
@@ -47,14 +38,21 @@
       </section>
 
       <div class="start-menu" id="startMenu" hidden>
-        <div class="start-search">🔎 Search apps, settings, and documents</div>
-        <div class="start-grid">
+        <input class="start-search" id="startSearch" placeholder="Search apps, settings, and documents" />
+        <div class="start-grid" id="startGrid">
           <button class="pinned" data-app="explorer">📁 Explorer</button>
           <button class="pinned" data-app="edge">🌐 Edge</button>
           <button class="pinned" data-app="store">🛍️ Store</button>
           <button class="pinned" data-app="terminal">⌨️ Terminal</button>
           <button class="pinned" data-app="settings">⚙️ Settings</button>
           <button class="pinned" data-app="photos">🖼️ Photos</button>
+          <button class="pinned" data-app="notepad">📝 Notepad</button>
+          <button class="pinned" data-app="calculator">🧮 Calculator</button>
+          <button class="pinned" data-app="calendar">📅 Calendar</button>
+          <button class="pinned" data-app="clockapp">⏰ Clock</button>
+          <button class="pinned" data-app="paint">🎨 Paint</button>
+          <button class="pinned" data-app="snipping">✂️ Snipping Tool</button>
+          <button class="pinned" data-app="mediaplayer">🎵 Media Player</button>
         </div>
         <footer class="start-footer">
           <span>User</span>
@@ -76,6 +74,8 @@
           <button class="task-btn open-app" data-app="edge">🌐</button>
           <button class="task-btn open-app" data-app="store">🛍️</button>
           <button class="task-btn open-app" data-app="terminal">⌨️</button>
+          <button class="task-btn open-app" data-app="settings">⚙️</button>
+          <button class="task-btn open-app" data-app="notepad">📝</button>
           <button class="task-btn" id="widgetsBtn">🧩</button>
         </div>
         <div class="taskbar-right">
