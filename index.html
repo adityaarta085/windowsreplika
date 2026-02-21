@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 11 Replica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="desktop" id="desktop">
+      <div class="wallpaper-overlay"></div>
+
+      <aside class="desktop-icons">
+        <button class="icon" data-app="explorer"><span>📁</span><small>File Explorer</small></button>
+        <button class="icon" data-app="edge"><span>🌐</span><small>Microsoft Edge</small></button>
+        <button class="icon" data-app="store"><span>🛍️</span><small>Microsoft Store</small></button>
+        <button class="icon" data-app="terminal"><span>⌨️</span><small>Terminal</small></button>
+        <button class="icon" data-app="notepad"><span>📝</span><small>Notepad</small></button>
+        <button class="icon" data-app="calculator"><span>🧮</span><small>Calculator</small></button>
+        <button class="icon" data-app="settings"><span>⚙️</span><small>Settings</small></button>
+      </aside>
+
+      <section class="window" id="window" aria-live="polite">
+        <header class="window-titlebar" id="titlebar">
+          <div class="title-left">
+            <span class="title-dot"></span>
+            <h2 id="windowTitle">Desktop</h2>
+          </div>
+          <div class="title-actions">
+            <button id="minimize" aria-label="Minimize">—</button>
+            <button id="maximize" aria-label="Maximize">▢</button>
+            <button id="close" aria-label="Close">✕</button>
+          </div>
+        </header>
+        <div class="window-body" id="windowBody">
+          <h3>Selamat datang</h3>
+          <p>Pilih aplikasi dari desktop atau taskbar untuk memulai.</p>
+        </div>
+      </section>
+
+      <div class="start-menu panel" id="startMenu" hidden>
+        <input class="start-search" id="startSearch" placeholder="🔎 Cari aplikasi..." />
+        <div class="start-grid" id="startGrid"></div>
+        <footer class="start-footer">
+          <span>👤 User</span>
+          <button id="powerBtn">⏻ Power</button>
+        </footer>
+      </div>
+
+      <div class="widgets panel" id="widgets" hidden>
+        <h3>Widgets</h3>
+        <div class="widget-card" id="weatherWidget">🌤️ Memuat cuaca...</div>
+        <div class="widget-card">📅 Tidak ada agenda penting hari ini</div>
+        <div class="widget-card">💡 Tips: Tekan ikon jam untuk Notification Center</div>
+      </div>
+
+      <div class="quick-settings panel" id="quickSettings" hidden>
+        <h3>Quick Settings</h3>
+        <div class="quick-grid">
+          <button class="toggle on" data-toggle="wifi">Wi-Fi</button>
+          <button class="toggle on" data-toggle="bluetooth">Bluetooth</button>
+          <button class="toggle" data-toggle="airplane">Airplane</button>
+          <button class="toggle on" data-toggle="night">Night Light</button>
+        </div>
+      </div>
+
+      <div class="notifications panel" id="notifications" hidden>
+        <h3>Notification Center</h3>
+        <div class="widget-card">✅ Sistem berjalan normal.</div>
+        <div class="widget-card">📦 3 update aplikasi tersedia di Store.</div>
+      </div>
+
+      <footer class="taskbar">
+        <div class="taskbar-center">
+          <button class="task-btn" id="startBtn" aria-label="Start">⊞</button>
+          <button class="task-btn" id="taskViewBtn" aria-label="Task View">▦</button>
+          <button class="task-btn open-app" data-app="explorer">📁</button>
+          <button class="task-btn open-app" data-app="edge">🌐</button>
+          <button class="task-btn open-app" data-app="store">🛍️</button>
+          <button class="task-btn open-app" data-app="terminal">⌨️</button>
+          <button class="task-btn" id="widgetsBtn">🧩</button>
+        </div>
+        <div class="taskbar-right">
+          <button id="quickSettingsBtn" class="status-btn">📶 🔊 🔋</button>
+          <button id="clockBtn" class="status-btn">
+            <span id="clock"></span>
+            <span id="date"></span>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
