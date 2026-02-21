@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 11 Replica</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="desktop" id="desktop">
+      <div class="wallpaper-overlay"></div>
+
+      <aside class="desktop-icons">
+        <button class="icon" data-app="explorer">
+          <span>📁</span>
+          <small>File Explorer</small>
+        </button>
+        <button class="icon" data-app="edge">
+          <span>🌐</span>
+          <small>Microsoft Edge</small>
+        </button>
+        <button class="icon" data-app="store">
+          <span>🛍️</span>
+          <small>Microsoft Store</small>
+        </button>
+        <button class="icon" data-app="terminal">
+          <span>⌨️</span>
+          <small>Terminal</small>
+        </button>
+      </aside>
+
+      <section class="window" id="window" aria-live="polite">
+        <header class="window-titlebar">
+          <div class="title-left">
+            <span class="title-dot"></span>
+            <h2 id="windowTitle">Welcome</h2>
+          </div>
+          <div class="title-actions">
+            <button id="minimize">—</button>
+            <button id="maximize">▢</button>
+            <button id="close">✕</button>
+          </div>
+        </header>
+        <div class="window-body" id="windowBody">
+          <p>Select an app icon from desktop or taskbar.</p>
+        </div>
+      </section>
+
+      <div class="start-menu" id="startMenu" hidden>
+        <div class="start-search">🔎 Search apps, settings, and documents</div>
+        <div class="start-grid">
+          <button class="pinned" data-app="explorer">📁 Explorer</button>
+          <button class="pinned" data-app="edge">🌐 Edge</button>
+          <button class="pinned" data-app="store">🛍️ Store</button>
+          <button class="pinned" data-app="terminal">⌨️ Terminal</button>
+          <button class="pinned" data-app="settings">⚙️ Settings</button>
+          <button class="pinned" data-app="photos">🖼️ Photos</button>
+        </div>
+        <footer class="start-footer">
+          <span>User</span>
+          <button id="powerBtn">⏻ Power</button>
+        </footer>
+      </div>
+
+      <div class="widgets" id="widgets" hidden>
+        <h3>Widgets</h3>
+        <div class="widget-card">🌤️ 28°C · Cerah</div>
+        <div class="widget-card">📅 Agenda kosong hari ini</div>
+        <div class="widget-card">📰 Headline: Build with confidence</div>
+      </div>
+
+      <footer class="taskbar">
+        <div class="taskbar-center">
+          <button class="task-btn" id="startBtn" aria-label="Open Start">⊞</button>
+          <button class="task-btn open-app" data-app="explorer">📁</button>
+          <button class="task-btn open-app" data-app="edge">🌐</button>
+          <button class="task-btn open-app" data-app="store">🛍️</button>
+          <button class="task-btn open-app" data-app="terminal">⌨️</button>
+          <button class="task-btn" id="widgetsBtn">🧩</button>
+        </div>
+        <div class="taskbar-right">
+          <span id="clock"></span>
+          <span id="date"></span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
